@@ -1,0 +1,28 @@
+
+
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>blog</th>
+      <th>Short Bio</th>
+      <th>Photo</th>
+      <th>Twitter</th>
+      <th>Github</th>
+      <th>Resume</th>
+    </tr>
+  <% @students.each do |student_hash| %>
+    <tr>
+      <td><%= student_hash["first_name"] %></td>
+      <td><%= student_hash["last_name"] %></td>
+      <td><%= student_hash["blog_url"] %></td>
+      <td><<%= student_hash["short_bio"] %></td>
+      <td><img src="<%= student_hash["photo"] %>"</td>
+      <td><%= student_hash["twitter_handle"] %></td>
+      <td><%= student_hash["github_url"] %></td>
+      <td><%= student_hash["resumer_url"] %></td>
+
+
+    </tr>
+  <% end %>
+  </table> 
