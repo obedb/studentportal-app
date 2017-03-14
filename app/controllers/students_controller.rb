@@ -1,13 +1,12 @@
 class StudentsController < ApplicationController
 
   def index
-    @students = Unirest.get("localhost:3000/students.json").body
-    # @students = Student.all 
+    @students = Unirest.get("localhost:3000/students.json").body['student']
   end
 
   def show
     @student = Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body
-    # render :show
+ 
 
   end
   def edit
