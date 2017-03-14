@@ -1,0 +1,20 @@
+<table>
+  <tr>
+  <h1>
+    <td> Start Date </td>
+    <td>End Date</td>
+    <td>Degree</td>
+    <td>University Name</td>
+    <td>Details</td>
+  </h1>
+  </tr>
+  <% @experiences.each do |experience| %>
+    <tr>
+      <td><%= experience.start_date %></td> 
+      <td><%= experience.end_date %></td>
+      <td><%= experience.degree %></td> 
+      <td><%= experience.details %></td
+      <td><%= experience.university_name.capitalize %></td>
+    </tr>
+  <% end %>
+</table>
