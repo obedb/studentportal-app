@@ -6,7 +6,8 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body
+    @student = Unirest.get("localhost:3000/students/#{:id}.json").body
+    
   end
   def edit
     @student = Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body
