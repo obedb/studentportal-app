@@ -1,5 +1,9 @@
 class StudentsController < ApplicationController
 
+  def index
+    @foods = Unirest.get("http://localhost:3000/students.json").body
+  end
+
   def show
     @student = Unirest.get("http://localhost:3000/students/#{params[:id]}.json").body
   end
