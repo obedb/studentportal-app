@@ -1,7 +1,7 @@
 class ExperiencesController < ApplicationController
 
   def index 
-    @experiences = Unirest.get("http://localhost:3000/experiences
+    @experiences = Unirest.get("http://localhost:3000/experiences.json")
   end
 
   def show
