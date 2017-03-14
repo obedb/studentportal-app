@@ -1,0 +1,25 @@
+<h1> Edit Experience </h1>
+
+
+<%= form_tag "/experience/#{@experience.id}", method: :patch do %>
+
+  <%= label_tag :experience_id %>
+  <%= text_field_tag :experience_id, @experience.experience_id %>
+
+  <%= label_tag :start_date %>
+  <%= text_field_tag :start_date, @experience.start_date %>
+
+  <%= label_tag :end_date %>
+  <%= text_field_tag :end_date, @experience.end_date %>
+
+  <%= label_tag :degree %> 
+  <%= text_field_tag :degree, @experience.degree %>
+
+  <%= label_tag :university_name %> 
+  <%= text_field_tag :university_name, @experience.university_name %>
+
+  <%= label_tag :details %> 
+  <%= text_field_tag :details, @experience.details %> 
+
+  <%= submit_tag "Update Company" %>
+<% end %>
