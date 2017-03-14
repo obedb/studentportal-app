@@ -5,7 +5,7 @@ class ExperiencesController < ApplicationController
   end
 
   def show
-   @experience = Unirest.get("http://localhost:3000/experiences/#{params[:id]}.json"
+   @experience = Unirest.get("http://localhost:3000/experiences/#{params[:id]}.json")
   end
 
   def edit 
