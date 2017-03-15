@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     # make api call to localhost 3000
-    @students = Unirest.get("http://localhost:3000/api/v2/students.json").body["student"]
+    # @students = Unirest.get("http://localhost:3000/api/v2/students.json").body["student"]
     if params[:email] == "eugene.niyitanga2015@kepler.org"
       flash[:success] = 'Successfully logged in!'
       redirect_to '/'

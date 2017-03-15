@@ -1,13 +1,8 @@
 class StudentsController < ApplicationController
 
   def index
-<<<<<<< HEAD
-    @students = Unirest.get("http://localhost:3000/students.json").body
-    @students = Unirest.get("localhost:3000/students.json").body
-    # @students = Student.all 
-=======
-    @students = Unirest.get("http://localhost:3000/api/v2/students.json").body['student']
->>>>>>> eb298f173fa8cb4fa14bf816401296e579cbff2e
+    @students = Unirest.get("http://localhost:3000/api/v2/students.json")
+
   end
 
   def show
