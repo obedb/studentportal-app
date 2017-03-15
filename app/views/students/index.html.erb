@@ -1,5 +1,7 @@
-
-
+<% @students.each do |student| %>
+  <p> link_to <%= student["first_name"] %> </p>
+  <p> <%= student["last_name"] %> </p>
+  <p> <%= student["blog_url"] %> </p>
   <table>
     <tr>
       <th>First Name</th>
@@ -20,10 +22,13 @@
       <td><img src="<%= student_hash["photo"] %>" class="img-rounded" alt="Cinque Terre" width="95" height="90"></td>
       <td><%= student_hash["twitter_handle"] %></td>
       <td><%= student_hash["github_url"] %></td>
-      <td><%= student_hash["resumer_url"] %></td>
-
-
+      <td><%= student_hash["resume_url"] %></td>
     </tr>
   <% end %>
+<<<<<<< HEAD
+  <% end %>
+  </table> 
+=======
   </table> 
 
+>>>>>>> eb298f173fa8cb4fa14bf816401296e579cbff2e

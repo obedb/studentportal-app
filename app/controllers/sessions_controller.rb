@@ -4,9 +4,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    # make api call to localhost 3000
+    # @students = Unirest.get("http://localhost:3000/api/v2/students.json").body["student"]
+    if params[:email] == "eugene.niyitanga2015@kepler.org"
       flash[:success] = 'Successfully logged in!'
       redirect_to '/'
     else

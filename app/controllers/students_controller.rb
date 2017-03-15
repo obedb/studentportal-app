@@ -1,7 +1,12 @@
 class StudentsController < ApplicationController
 
   def index
+
+    # @students = Unirest.get("http://localhost:3000/api/v2/students.json")
+
+
     @students = Unirest.get("http://localhost:3000/api/v2/students.json").body
+
   end
 
   def show
@@ -9,6 +14,7 @@ class StudentsController < ApplicationController
  
 
   end
+  
   def edit
     @student = Unirest.get("http://localhost:3000/api/v2/students/#{params[:id]}.json").body
   end
