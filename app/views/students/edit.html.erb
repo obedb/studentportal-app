@@ -4,37 +4,37 @@
 <%= form_tag "/students/#{@student['id']}", method: :patch do %>
 
   <%= label_tag :first_name %>
-  <%= text_field_tag :first_name, @student.first_name %>
+  <%= text_field_tag :first_name, @student["first_name"] %>
 
   <%= label_tag :last_name %>
-  <%= text_field_tag :last_name, @student.last_name %>
+  <%= text_field_tag :last_name, @student["last_name"]%>
 
   <%= label_tag :email %> 
-  <%= text_field_tag :email, @student.email %>
+  <%= text_field_tag :email, @student["email"]%>
 
   <%= label_tag :phone_number %> 
-  <%= text_field_tag :phone_number, @student.phone_number %>
+  <%= text_field_tag :phone_number, @student["phone_number"]%>
 
   <%= label_tag :short_bio %> 
-  <%= text_field_tag :short_bio, @student.short_bio %>
+  <%= text_field_tag :short_bio, @student["short_bio"]%>
 
   <%= label_tag :linkedin_url %> 
-  <%= text_field_tag :linkedin_url, @student.linkedin_url %>
+  <%= text_field_tag :linkedin_url, @student["linkedin_url"] %>
 
   <%= label_tag :twitter_handle %> 
-  <%= text_field_tag :twitter_handle, @student.twitter_handle %>
+  <%= text_field_tag :twitter_handle, @student["twitter_handle"] %>
 
   <%= label_tag :blog_url %> 
-  <%= text_field_tag :blog_url, @student.blog_url %>
+  <%= text_field_tag :blog_url, @student["blog_url]" %>
 
   <%= label_tag :resume_url %> 
-  <%= text_field_tag :resume_url, @student.resume_url %>
+  <%= text_field_tag :resume_url, @student["resume_url"] %>
 
   <%= label_tag :github_url %> 
-  <%= text_field_tag :github_url, @student.github_url %>
+  <%= text_field_tag :github_url, @student["github_url"] %>
 
   <%= label_tag :photo %> 
-  <%= text_field_tag :photo, @student.photo %>
+  <%= text_field_tag :photo, @student["photo"] %>
 
   <%= submit_tag "Update" %>
 <% end %>

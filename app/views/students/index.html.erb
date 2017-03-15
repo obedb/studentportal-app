@@ -15,15 +15,20 @@
     </tr>
   <% @students.each do |student_hash| %>
     <tr>
-      <td><%= student_hash["first_name"] %></td>
+      <td><%=link_to student_hash["first_name"], "/students/#{student_hash['id']}" %> </td>
       <td><%= student_hash["last_name"] %></td>
       <td><%= student_hash["blog_url"] %></td>
-      <td><<%= student_hash["short_bio"] %></td>
-      <td><img src="<%= student_hash["photo"] %>"</td>
+      <td><%= student_hash["short_bio"] %></td>
+      <td><img src="<%= student_hash["photo"] %>" class="img-rounded" alt="Cinque Terre" width="95" height="90"></td>
       <td><%= student_hash["twitter_handle"] %></td>
       <td><%= student_hash["github_url"] %></td>
       <td><%= student_hash["resume_url"] %></td>
     </tr>
   <% end %>
+<<<<<<< HEAD
   <% end %>
   </table> 
+=======
+  </table> 
+
+>>>>>>> eb298f173fa8cb4fa14bf816401296e579cbff2e
